@@ -1,0 +1,7 @@
+__pycache__/
+output/
+stats/
+graphs/
+*backup/
+*bak/
+

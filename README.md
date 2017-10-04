@@ -1,8 +1,8 @@
-#Docker Executor
+# Docker Executor
 Script to launch docker containers with varying configurations and record stats for resource utilization.
 Graph scripts help to visually represent the collected stats.
 
-##Environment Variables
+## Environment Variables
 ```
 DOCKER_EXECUTOR_CLUSTERHOSTS_FILE_LOCATION --> location of the file which contains the hostnames of the cluster
 
@@ -10,7 +10,7 @@ DOCKER_EXECUTOR_CLUSTERAUTH_USERNAME --> username for superuser access on the cl
 DOCKER_EXECUTOR_CLUSTERAUTH_PASSWORD --> password for superuser access on the cluster hosts
 ```
 
-##Run the following command to launch docker containers, given the benchmark image tag, and record the stats.
+## Run the following command to launch docker containers, given the benchmark image tag, and record the stats.
 ```
         python3 executor.py <image tag> <number of runs>
 ```
@@ -25,7 +25,7 @@ The output files of the benchmark would be in the following directory,
         output/<benchmark name>
 ```
 
-##Run the following command to generate graphs, given the stats files, for all the benchmarks that were run.
+## Run the following command to generate graphs, given the stats files, for all the benchmarks that were run.
 ```
         python3 extractor_graph.py stats output <destination directory>
 ```

@@ -43,7 +43,7 @@ def get_cpu_count():
 
 def get_cluster_hostnames():
 	hosts = list()
-	with open(os.getenv('DOCKER_EXECUTOR_CLUSTERHOSTS_FILE_LOCATION')) as cluster_hostnames_file:
+	with open(os.getenv('CONTAINER_PROFILER_CLUSTERHOSTS_FILE_LOCATION')) as cluster_hostnames_file:
 		hosts = cluster_hostnames_file.readlines()
 	# removing the new line character at the end of each line
 	hosts = [line.strip() for line in hosts]
@@ -57,8 +57,8 @@ if __name__ == "__main__":
 		print("USAGE: python3 pull_cluster_info.py <FIELD>")
 	else:
 		Host_names = []
-		USERNAME = os.getenv('DOCKER_EXECUTOR_CLUSTERAUTH_USERNAME')
-		PASSWORD = os.getenv('DOCKER_EXECUTOR_CLUSTERAUTH_PASSWORD')
+		USERNAME = os.getenv('CONTAINER_PROFILER_CLUSTERAUTH_USERNAME')
+		PASSWORD = os.getenv('CONTAINER_PROFILER_CLUSTERAUTH_PASSWORD')
 		FIELD = sys.argv[1]
 
 		for host in Host_names:

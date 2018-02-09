@@ -20,8 +20,8 @@ def get_benchmark_name(image_tag):
 
 
 #credentials for logging into cluster to run the ssh scripts that retrieve the memory and cpu information.
-USERNAME = os.getenv('DOCKER_EXECUTOR_CLUSTERAUTH_USERNAME')
-PASSWORD = os.getenv('DOCKER_EXECUTOR_CLUSTERAUTH_PASSWORD')
+USERNAME = os.getenv('CONTAINER_PROFILER_CLUSTERAUTH_USERNAME')
+PASSWORD = os.getenv('CONTAINER_PROFILER_CLUSTERAUTH_PASSWORD')
 
 #mem in range [2g, free_mem] and cpu_share in range [1, total number of cpus]
 def generate_cpu_mem_configurations(number_of_runs):

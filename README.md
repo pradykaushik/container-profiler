@@ -1,13 +1,13 @@
-# Docker Executor
+# Container Profiler
 Script to launch docker containers with varying configurations and record stats for resource utilization.
 Graph scripts help to visually represent the collected stats.
 
 ## Environment Variables
 ```
-DOCKER_EXECUTOR_CLUSTERHOSTS_FILE_LOCATION --> location of the file which contains the hostnames of the cluster
+CONTAINER_PROFILER_CLUSTERHOSTS_FILE_LOCATION --> location of the file which contains the hostnames of the cluster
 
-DOCKER_EXECUTOR_CLUSTERAUTH_USERNAME --> username for superuser access on the cluster hosts
-DOCKER_EXECUTOR_CLUSTERAUTH_PASSWORD --> password for superuser access on the cluster hosts
+CONTAINER_PROFILER_CLUSTERAUTH_USERNAME --> username for superuser access on the cluster hosts
+CONTAINER_PROFILER_CLUSTERAUTH_PASSWORD --> password for superuser access on the cluster hosts
 ```
 
 ## Run the following command to launch docker containers, given the benchmark image tag, and record the stats.
